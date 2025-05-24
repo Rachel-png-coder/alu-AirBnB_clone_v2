@@ -13,47 +13,8 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    """Command interpreter for the HBNB project
-
-
-    **CMD MODULE CONVENTION**
-
-
-    The cmd module in Python provides a framework for writing
-    line-oriented command interpreters. It provides a base class, cmd.Cmd,
-    that defines methods and attributes for creating a command-line interface.
-
-    Conventions followed by the cmd module:
-
-    Command methods must start with the prefix ``do_``
-
-    *Examples:*\n
-    ``do_quit()`` will run the command ``quit`` \n
-    ``do_foo()`` will run the command ``foo``
-
-    \n
-
-    Help methods must start with the prefix ``help_``
-
-     *Examples:*\n
-    ``help_quit()`` will run the command ``help quit`` \n
-    ``help_save()`` will run the command ``help save``
-
-    The ``emptyline()`` method is called when an empty line is entered in the
-    command prompt. By default, it repeats the last non-empty command entered.
-    However, it can be overridden to perform a different action or pass.
-
-    The ``EOF`` command (or Ctrl-D) is handled by the ``do_EOF()`` method,
-    which by default exits the command interpreter.
-
-    The ``quit`` command is handled by the ``do_quit()`` method,
-    which by default exits the command interpreter.
-
-    The ``help`` command is handled by the ``do_help()`` method,
-    which by default lists all available commands and their brief descriptions.
-
-    More information can be found in the official documentation on
-    [cmd source code](https://github.com/python/cpython/blob/3.11/Lib/cmd.py)
+    """
+    Command interpreter for the HBNB project
     """
 
     # prints (hbnb) if the script is running in a terminal otherwise ''
@@ -392,10 +353,4 @@ class HBNBCommand(cmd.Cmd):
 
 
 if __name__ == "__main__":
-    """
-    Repeatedly issue a prompt, accept input, parse an initial prefix
-    off the received input, and dispatch to action methods, passing them
-    the remainder of the line as argument.
-    (see: https://github.com/python/cpython/blob/3.8/Lib/cmd.py#L98)
-    """
-    HBNBCommand().cmdloop() 
+    HBNBCommand().cmdloop()
